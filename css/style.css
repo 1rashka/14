@@ -1,0 +1,414 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.inner {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 2px;
+  position: relative;
+  z-index: 35;
+  min-height: 66px;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  background-color: #1d2631;
+  max-width: 1440px;
+  margin: 0 auto;
+  opacity: 0.7;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.header--active::before {
+  content: "";
+  opacity: 1;
+}
+
+.header__wrapper {
+  margin: 0 auto;
+  z-index: 15;
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header__burger {
+  width: 50px;
+  height: 24px;
+  position: relative;
+  z-index: 15;
+}
+.header__burger::before, .header__burger::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background-color: #fff;
+  transition: all 0.5s;
+}
+.header__burger::before {
+  top: 0;
+}
+.header__burger::after {
+  bottom: 0;
+}
+
+.header__line {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background-color: #fff;
+  top: 10px;
+  transition: all 1s;
+}
+
+.header__nav {
+  width: 100%;
+  margin-top: 25px;
+  display: none;
+}
+.header__nav:last-child {
+  border-bottom: 1px solid #000;
+}
+
+.burger-active .header__line {
+  top: -100px;
+  transition: all 1.5s;
+}
+.burger-active::before {
+  content: "";
+  transform: rotate(45deg);
+  top: 12px;
+  transition: all 0.5s;
+}
+.burger-active::after {
+  content: "";
+  transform: rotate(-45deg);
+  bottom: 9px;
+  transition: all 0.5s;
+}
+
+.burger-active + .header__nav {
+  display: block;
+}
+
+.header__item {
+  text-align: center;
+  position: relative;
+}
+.header__item::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-bottom: 1px solid #000;
+}
+
+.header__link {
+  display: block;
+  padding: 15px 0;
+  text-transform: uppercase;
+}
+
+.list__link {
+  font-size: 14px;
+  line-height: 1;
+  color: #fff;
+}
+
+.intro {
+  position: relative;
+  z-index: 15;
+  padding-top: 75px;
+}
+.intro::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -66px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1d2631;
+  background-image: url("/img/back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: 100%;
+}
+
+.intro__content {
+  position: relative;
+  z-index: 15;
+}
+.intro__content::before {
+  content: "";
+  display: block;
+  background-image: url("/img/iphone-5-in-hand-png.png");
+  background-repeat: no-repeat;
+  width: auto;
+  height: 315px;
+}
+
+.intro__wrapper {
+  padding-top: 30px;
+  background-color: #1d2631;
+}
+
+.link-button {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding: 17px 0;
+  border: 3px solid #fff;
+  border-radius: 25px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.intro__title {
+  display: none;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.intro__contain {
+  padding-top: 40px;
+  width: 202px;
+  margin: 0 auto;
+}
+
+.intro__text {
+  margin-top: 29px;
+  padding-bottom: 15px;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.71;
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 650px) {
+  .intro__title {
+    display: block;
+  }
+
+  .intro::before {
+    content: "";
+    background-image: url("/img/back-tablet@1x.jpg");
+  }
+
+  .intro__content {
+    max-width: 660px;
+    margin: 0 auto;
+    z-index: 10;
+    position: relative;
+  }
+  .intro__content::before {
+    content: "";
+    width: 100%;
+    height: 530px;
+    position: absolute;
+    top: 15px;
+    z-index: 1;
+    background-image: url("/img/iphone-6 copy.png");
+  }
+
+  .intro__wrapper {
+    min-height: 545px;
+    background-color: inherit;
+    position: relative;
+    z-index: 10;
+  }
+
+  .intro__wrapper {
+    width: 350px;
+    text-align: center;
+  }
+
+  .intro__title {
+    margin-bottom: 45px;
+  }
+}
+@media (min-width: 992px) {
+  .header {
+    padding-top: 0;
+    min-height: auto;
+  }
+
+  .wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .header__nav {
+    width: auto;
+    display: block;
+    margin: 0;
+    transform: 1s;
+  }
+  .header__nav:last-child {
+    border: none;
+  }
+
+  .list {
+    display: flex;
+  }
+
+  .header__item {
+    margin-left: 81px;
+    padding: 0;
+  }
+  .header__item::before {
+    display: none;
+  }
+
+  .header__link {
+    text-transform: capitalize;
+  }
+
+  .list__link {
+    font-size: 18px;
+  }
+
+  .wrapper__title {
+    font-size: 50px;
+  }
+
+  .intro::before {
+    content: "";
+    background-image: url("/img/back-desktop.jpg");
+    background-position: 50% 40%;
+  }
+  .intro .intro__content {
+    max-width: 990px;
+    margin: 0 auto;
+  }
+  .intro .intro__content::before {
+    background-position: 70% 0;
+  }
+}
