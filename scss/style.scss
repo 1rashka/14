@@ -265,7 +265,7 @@
     }
 
     .intro__link-button{
-        
+        flex: 1;
     }
     .link-button{
         display: block;
@@ -276,7 +276,7 @@
         padding: 17px 0;
         border: 3px solid $colorWhite;
         border-radius: 25px;
-        width: 300px;
+        max-width: 300px;
         margin: 0 auto;
         
     }

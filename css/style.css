@@ -266,6 +266,10 @@ img {
   background-color: #1d2631;
 }
 
+.intro__link-button {
+  flex: 1;
+}
+
 .link-button {
   display: block;
   font-size: 18px;
@@ -275,7 +279,7 @@ img {
   padding: 17px 0;
   border: 3px solid #fff;
   border-radius: 25px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 
