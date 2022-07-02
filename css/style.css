@@ -312,6 +312,40 @@ img {
   text-align: center;
 }
 
+.subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  color: #283645;
+}
+
+.info {
+  margin-top: 50px;
+  overflow: hidden;
+  position: relative;
+  z-index: 15;
+}
+.info::after {
+  content: "";
+  position: absolute;
+  background-color: #f2f2f2;
+  top: 100px;
+  left: -5%;
+  bottom: -10px;
+  transform: rotate(-4deg);
+  width: 110%;
+  height: 100%;
+}
+.info .info__subtitle {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.info__content {
+  position: relative;
+  z-index: 15;
+}
+
 @media (min-width: 650px) {
   .intro__title {
     display: block;
