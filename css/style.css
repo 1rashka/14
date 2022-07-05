@@ -329,14 +329,15 @@ img {
   content: "";
   position: absolute;
   background-color: #f2f2f2;
-  top: 100px;
+  top: 125px;
   left: -5%;
   bottom: -10px;
   transform: rotate(-4deg);
-  width: 110%;
+  width: 120%;
   height: 100%;
 }
-.info .info__subtitle {
+
+.info__subtitle {
   width: 70%;
   margin: 0 auto;
 }
@@ -344,6 +345,44 @@ img {
 .info__content {
   position: relative;
   z-index: 15;
+}
+
+.info__wrapper {
+  margin-top: 100px;
+}
+.info__wrapper::after {
+  content: "";
+  display: block;
+  width: 157px;
+  height: 320px;
+  background-image: url("/img/iphone screen mob.png");
+  margin: 45px auto 0;
+}
+
+.info__item + .info__item {
+  margin-top: 38px;
+}
+
+.big-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+}
+
+.info__text {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.71;
+  color: #fff;
+  text-align: center;
+  color: #283645;
 }
 
 @media (min-width: 650px) {
